@@ -1,0 +1,21 @@
+{
+    "editor.mouseWheelZoom": true,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font','Droid Sans Mono', monospace",
+    "workbench.colorCustomizations": {
+        "sideBar.background": "#000000",
+        "editor.background": "#000000",
+        "activityBar.background": "#000000",
+        "statusBar.background":"#000000",
+        "terminal.background":"#000000",
+        "titleBar.activeBackground":"#000000",
+    },
+    "background.fullscreen": {
+        "images": ["/home/naz/Downloads/butcher.jpg"],
+        "opacity": 0.2,
+        "size": "cover",
+        "position": "center",
+        "styles": [],
+        "interval": 0,
+        "random": false
+    },
+}
