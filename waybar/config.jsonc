@@ -1,0 +1,199 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 35, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 5, // Gaps between modules
+    "margin": "20 20 0 20",
+    // Choose the order of the modules
+    "modules-left": [
+        "group/workspacesgroup",
+        "group/media-player"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "group/control",
+        "group/log",
+        "tray"
+    ],
+    // Modules configuration
+    "group/workspacesgroup":{
+        "orientation":"horizontal",
+        "modules":[
+            "sway/workspaces",
+            "sway/scratchpad"
+        ]
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+
+
+
+    "group/media-player": {
+        "orientation": "horizontal",
+        "empty_if_drawer_empty":"true",
+        "modules": [
+            "custom/media-prev", 
+            "custom/media-play", 
+            "custom/media-next",
+            "custom/media"
+        ]
+    },
+    "custom/media-prev": {
+        "format": "{icon}",
+        "on-click": "playerctl previous",
+        "format-icons":"󰙣",
+        "tooltip": false,
+        "exec":"playerctl status --follow"
+    },
+    "custom/media-play": {
+        "format": "{icon}",
+        "return-type": "json",
+        "exec": "playerctl metadata --format '{\"alt\": \"{{status}}\"}' --follow",
+        "format-icons": {
+            "Playing": "",
+            "Paused": "" 
+        },
+        "on-click": "playerctl play-pause",
+        "tooltip": false
+    },
+    "custom/media-next": {
+        "format": "{icon}",
+        "on-click": "playerctl next",
+        "format-icons":"󰙡",
+        "tooltip": false,
+        "exec":"playerctl status --follow"
+    },
+    "custom/media": {
+        "format": "{text}",
+        "return-type":"json",
+        "max-length": 40,
+        "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"tooltip\": \"{{playerName}}: {{artist}} - {{title}}\"}' --follow",
+    },
+
+
+    
+    "clock": {
+        "format": "{:%H:%M | %d-%m-%Y}",
+        "format-alt": "{:%A}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months":    "<span color='#ffffff'><b>{}</b></span>",
+                "days":      "<span color='#ffffff'><b>{}</b></span>",
+                "today":     "<span color='#98d975'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+
+
+    "group/control":{
+        "orientation":"horizontal",
+        "modules":[
+            "idle_inhibitor",
+            "pulseaudio",
+            "power-profiles-daemon"
+        ]
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+    
+    "group/log":{
+        "orientation":"horizontal",
+        "modules":[
+            "network",
+            "cpu",
+            "memory",
+            "backlight",
+            "battery"
+        ]
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+
+
+
+    "tray": {
+        "spacing": 10
+    }
+}
