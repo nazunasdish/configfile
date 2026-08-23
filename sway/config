@@ -185,4 +185,9 @@ exec waybar
 exec nm-applet
 exec fcitx5
 exec autotiling
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+
+
+
 include /etc/sway/config.d/*
