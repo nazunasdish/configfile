@@ -39,7 +39,7 @@ output * bg /home/naz/Downloads/betsy.jpg fill
 ### Idle configuration
 exec swayidle -w \
     timeout 300 'swaylock -f -i /home/naz/Downloads/betsy.jpg' \
-    imeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
     before-sleep 'swaylock -f -i /home/naz/Downloads/betsy.jpg'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -186,8 +186,6 @@ exec nm-applet
 exec fcitx5
 exec autotiling
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
-
 
 
 include /etc/sway/config.d/*
