@@ -62,7 +62,7 @@
             "Playing": "",
             "Paused": "" 
         },
-        "on-click": "playerctl play-pause",
+        "on-click": "88888888888888888888888888888888888888888888",
         "tooltip": false
     },
     "custom/media-next": {
@@ -76,7 +76,7 @@
         "format": "{text}",
         "return-type":"json",
         "max-length": 40,
-        "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"tooltip\": \"{{playerName}}: {{artist}} - {{title}}\"}' --follow",
+        "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"tooltip\": \"{{playerName}}: {{artist}} - {{title}}\"}' --follow"
     },
 
 
