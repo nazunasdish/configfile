@@ -82,6 +82,8 @@ exec swayidle -w \
     #lock
     bindsym $mod+l exec 'swaylock -f -i /home/naz/Downloads/betsy.jpg'
 
+    #clipboard
+    bindsym $mod+v exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -187,5 +189,7 @@ exec fcitx5
 exec autotiling
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec onboard
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
 
 include /etc/sway/config.d/*
