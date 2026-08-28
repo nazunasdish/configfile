@@ -7,6 +7,7 @@ cliphist
 code
 fcitx5
 fcitx5-bamboo
+fcitx5-configtool
 firefox
 git
 gnome-themes-extra
