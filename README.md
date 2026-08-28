@@ -1,6 +1,7 @@
 :)
 ardour
 autotiling
+blueman
 clamav
 cliphist
 code
