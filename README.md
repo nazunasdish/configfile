@@ -12,6 +12,7 @@ guitarix
 gvfs-mtp
 kitty
 krita
+man-db
 nemo
 nwg-look
 onboard
@@ -22,4 +23,5 @@ strawberry
 ttf-jetbrains-mono-nerd
 unrar
 unzip
+wl-clipboard
 wofi
