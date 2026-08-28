@@ -3,6 +3,7 @@ ardour
 autotiling
 clamav
 cliphist
+code
 fcitx5
 fcitx5-bamboo
 firefox
