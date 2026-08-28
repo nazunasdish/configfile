@@ -9,6 +9,7 @@ fcitx5
 fcitx5-bamboo
 firefox
 git
+gnome-themes-extra
 guitarix
 gvfs-mtp
 kitty
