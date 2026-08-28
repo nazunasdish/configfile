@@ -18,4 +18,6 @@
         "interval": 0,
         "random": false
     },
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "code-runner.runInTerminal": true,
 }
