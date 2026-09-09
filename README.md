@@ -5,10 +5,12 @@ blueman
 clamav
 cliphist
 code
+decoder
 fcitx5
 fcitx5-bamboo
 fcitx5-configtool
 firefox
+flatpak
 git
 gnome-themes-extra
 guitarix
@@ -22,6 +24,7 @@ onboard
 polkit-gnome
 proton-vpn-gtk-app
 spotify-launcher
+steam
 strawberry
 ttf-jetbrains-mono-nerd
 unrar
