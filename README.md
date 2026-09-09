@@ -17,6 +17,7 @@ guitarix
 gvfs-mtp
 kitty
 krita
+libreoffice
 man-db
 nemo
 nwg-look
