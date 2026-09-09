@@ -24,6 +24,7 @@ nwg-look
 onboard
 polkit-gnome
 proton-vpn-gtk-app
+shotcut
 spotify-launcher
 steam
 strawberry
