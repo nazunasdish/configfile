@@ -6,6 +6,7 @@ clamav
 cliphist
 code
 decoder
+fabla
 fcitx5
 fcitx5-bamboo
 fcitx5-configtool
