@@ -1,5 +1,6 @@
 :)
 ardour
+audacity
 autotiling
 blueman
 clamav
