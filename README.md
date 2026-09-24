@@ -22,6 +22,7 @@ libreoffice
 man-db
 nemo
 nwg-look
+obs-studio
 onboard
 polkit-gnome
 proton-vpn-gtk-app
@@ -30,7 +31,10 @@ spotify-launcher
 steam
 strawberry
 ttf-jetbrains-mono-nerd
+unity-hub
 unrar
 unzip
+which
 wl-clipboard
 wofi
+yt-dlp
