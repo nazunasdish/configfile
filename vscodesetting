@@ -20,4 +20,5 @@
     },
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "code-runner.runInTerminal": true,
+    "clangd.headerInsertion": "never",
 }
