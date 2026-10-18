@@ -20,6 +20,7 @@ gvfs-mtp
 kitty
 krita
 libreoffice
+lutris
 man-db
 nemo
 nwg-look
