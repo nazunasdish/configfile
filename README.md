@@ -41,3 +41,11 @@ which
 wl-clipboard
 wofi
 yt-dlp
+
+
+
+
+----------------------
+(flatpak)
+Bottles
+Flatseal
