@@ -29,6 +29,7 @@ onboard
 polkit-gnome
 protontricks
 proton-vpn-gtk-app
+qbittorrent
 shotcut
 spotify-launcher
 steam
