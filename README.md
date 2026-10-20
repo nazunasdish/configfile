@@ -27,6 +27,7 @@ nwg-look
 obs-studio
 onboard
 polkit-gnome
+protontricks
 proton-vpn-gtk-app
 shotcut
 spotify-launcher
