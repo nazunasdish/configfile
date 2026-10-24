@@ -50,7 +50,4 @@ yt-dlp
 (flatpak)
 Bottles
 Flatseal
-----------------------
-(aur)
-input-remapper-git
 
